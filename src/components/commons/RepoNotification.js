@@ -6,6 +6,7 @@ import StarSVG from './svg/StarSVG';
 import ForkSVG from './svg/ForkSVG';
 import Caret from './Caret';
 import Detail from './Detail';
+import BellSVG from './svg/BellSVG';
 
 const RepoDetailContainer = styled.div`
   display: inline-block;
@@ -16,10 +17,10 @@ const RepoDetailContainer = styled.div`
 
 const RepoDetailTagContainer = styled.span`
    border: 1px solid #cdcfd1;
-   border-width: 1px 0px 1px 1px;
+   border-width: 1px 1px 1px 1px;
    padding: 5px 10px;
    font-weight : bold;
-   border-radius : 5px 0px 0px 5px;
+   border-radius : 5px 5px 5px 5px;
    background-color : #f4f7f9;
    line-height: 20px;
    cursor : pointer;
@@ -29,32 +30,19 @@ const RepoDetailTagContainer = styled.span`
    }
 `;
 
-const RepoDetailValueContainer = styled.span`
-   border: 1px solid #cdcfd1;
-   padding: 5px 10px;
-   font-weight : bold;
-   border-radius : 0px 5px 5px 0px;
-   line-height: 20px;
-   cursor : pointer;
-   background-color : #ffffff;
-`;
 
-const RepoDetail = ({ tag, value }) => (
+const RepoNotification = ({ tag }) => (
   <RepoDetailContainer>
     <RepoDetailTagContainer>
-     
-      { tag === 'Star' && <StarSVG /> }
-      { tag === 'Fork' && <ForkSVG /> }
-
+      { tag === 'Notification' && <BellSVG/> }
       {tag}
      
     </RepoDetailTagContainer>
-    <RepoDetailValueContainer>{value}</RepoDetailValueContainer>
   </RepoDetailContainer>
 );
 
 
-export default RepoDetail;
+export default RepoNotification;
 
 Detail.propTypes = {
   tag: PropTypes.string.isRequired,

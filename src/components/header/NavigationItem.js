@@ -8,15 +8,15 @@ import ProjectSVG from '../commons/svg/ProjectSVG';
 import InsightsSVG from '../commons/svg/InsightsSVG';
 
 const NavigationItemWrapper = styled.div`
-    border: 1px solid transparent;
-    border-radius: 3px 3px 0 0;
-    border-top: 3px solid transparent;
+    
+    border-radius: 3px 3px 3px 3px;
+    border-bottom: 3px solid transparent;
     color: ${props => (props.selected ? '#24292e' : '#586069')};
     float: left;
     padding: 7px 15px 8px;
     white-space: nowrap;
-    background-color : ${props => props.selected && '#fff'};
-    border-color : ${props => props.selected && '#e36209 #e1e4e8 transparent'};
+    background-color : ${props => props.selected && '24292e'};
+    border-color : ${props => props.selected && '#e36209  transparent'};
     cursor : pointer;
     &:hover {
      color : #000;
@@ -49,6 +49,10 @@ const NavigationItem = ({
     {name === 'Pull Requests' && <PrSVG />}
     {name === 'Projects' && <ProjectSVG />}
     {name === 'Insights' && <InsightsSVG />}
+    {name === 'Wiki' && <IssueOpenedSVG />}
+    {name === 'Security' && <IssueOpenedSVG />}
+    {name === 'Action' && <IssueOpenedSVG />}
+    
     <NavigationItemAnchor href={url}>{name}</NavigationItemAnchor>
     { value
       ? <NavigationItemValue>{value}</NavigationItemValue>

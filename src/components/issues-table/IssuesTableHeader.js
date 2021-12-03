@@ -11,8 +11,8 @@ const IssuesTableHeaderContainer = styled.div`
     background-color: #f6f8fa;
     border: 1px solid #e1e4e8;
     border-bottom: none;
-    border-radius: 3px 3px 0 0;
-    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+    margin-top: 40px;
     position: relative;
     display : flex;
     flex-direction : row;
@@ -23,6 +23,7 @@ const IssuesTableHeaderContainer = styled.div`
       @media (max-width: 820px) {
         flex-direction : column;
       }
+     
 `;
 
 const OpenClosedIssueDetails = styled.div`
@@ -85,17 +86,16 @@ const IssuesTableHeader = () => (
     <OpenClosedIssueDetails>
       <OpenClosedIssueAnchor
         selected
-        href={`${WEB_URL}/${OWNER}/${REPO}/issues?q=is%3Aopen+is%3Aissue`}
+        
       >
         <IssueOpenedSVG />
-            253 Open
+            625 Open
       </OpenClosedIssueAnchor>
       <OpenClosedIssueAnchor
         style={{ marginLeft: '10px' }}
-        href={`${WEB_URL}/${OWNER}/${REPO}/issues?q=is%3Aopen+is%3Aissue`}
       >
         <CompletedSVG color="#586069" hoverColor="#24292e" />
-            6378 closed
+            10104 closed
       </OpenClosedIssueAnchor>
     </OpenClosedIssueDetails>
     <OtherDetails>

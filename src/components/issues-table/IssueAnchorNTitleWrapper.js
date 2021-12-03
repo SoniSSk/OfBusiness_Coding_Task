@@ -5,6 +5,8 @@ const IssueAnchorNTitleWrapper = styled.div`
   flex-direction : row;
   align-items: baseline;
   padding-top: 2px;
+ 
+  
 `;
 
 export default IssueAnchorNTitleWrapper;

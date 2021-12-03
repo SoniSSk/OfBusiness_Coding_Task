@@ -1,6 +1,6 @@
 ## Github Issue Page Clone With React Redux
 
-Running Application : [https://git-issues.netlify.com/](https://git-issues.netlify.com/)  <br />
+Running Application :  <br />
 
 Packages Used to build this project : 
 - create-react-app
